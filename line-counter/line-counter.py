@@ -16,7 +16,7 @@ def count_lines_in_directory(directory):
     
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith(('.py', '.js', '.html', '.css', '.ts', '.d.ts')):  # Include .ts files
+            if file.endswith(('.go','.py', '.js', '.html', '.css', '.ts', '.d.ts')):  # Include .ts files
                 file_path = os.path.join(root, file)
                 lines = count_lines_in_file(file_path)
                 file_counts.append((file_path, lines))
